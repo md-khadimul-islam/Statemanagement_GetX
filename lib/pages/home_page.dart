@@ -19,22 +19,71 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
+          // Get X Alert Dialog
           Card(
             child: ListTile(
               title: const Text('GetX Alert Dialog'),
               onTap: () {
                 Get.defaultDialog(
-                  title: 'GetX Dialog',
-
+                  middleText: 'Are you sure delete this chat',
+                  title: 'Delete Chat',
+                  confirm: TextButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: const Text('OK'),
+                  ),
+                  cancel: TextButton(
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: const Text('CANCEL'),
+                  ),
                 );
               },
             ),
-          )
+          ),
+          // Get X Bottom Sheet
+          Card(
+            child: ListTile(
+              title: const Text('GetX Bottom Sheet'),
+              onTap: () {
+                Get.bottomSheet(
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Colors.blue),
+                    child: Column(
+                      children: [
+                        ListTile(
+                          title: const Text('Light Theme'),
+                          leading: const Icon(Icons.light_mode),
+                          onTap: () {
+                            Get.changeTheme(ThemeData.light());
+                            Get.back();
+                          },
+                        ),
+                        ListTile(
+                          title: const Text('Dark Theme'),
+                          leading: const Icon(Icons.dark_mode),
+                          onTap: () {
+                            Get.changeTheme(ThemeData.dark());
+                            Get.back();
+                          },
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.snackbar('showMsg', 'GetX successfully run', backgroundColor: Colors.blue);
+          Get.snackbar('showMsg', 'GetX successfully run',
+              backgroundColor: Colors.blue);
         },
         child: const Icon(Icons.add),
       ),
