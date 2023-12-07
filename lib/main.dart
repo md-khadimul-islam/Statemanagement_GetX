@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:statemanagement/pages/home_page.dart';
 import 'package:statemanagement/pages/screen_one.dart';
+import 'package:statemanagement/pages/screen_three.dart';
 import 'package:statemanagement/pages/screen_two.dart';
+import 'package:statemanagement/providers/languages_provider.dart';
 
 
 void main() {
@@ -17,6 +19,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      translations: Languages(),
+      locale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en' 'US'),
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -27,6 +32,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/', page: () => const HomePage()),
         GetPage(name: '/screenOne', page: () => const ScreenOne()),
         GetPage(name: '/screenTwo', page: () => const ScreenTwo()),
+        GetPage(name: '/screenThree', page: () => const ScreenThree()),
       ],
     );
   }
