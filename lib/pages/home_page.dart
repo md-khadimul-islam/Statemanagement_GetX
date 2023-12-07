@@ -78,6 +78,17 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
+          Center(
+            child: IconButton(
+              onPressed: () {
+                Get.toNamed('screenOne');
+              },
+              icon: const Icon(
+                Icons.add,
+                size: 50,
+              ),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
