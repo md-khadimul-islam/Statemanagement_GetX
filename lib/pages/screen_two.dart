@@ -33,9 +33,18 @@ class ScreenTwo extends StatelessWidget {
                 color: Colors.red,
                 child: const Center(child: Text('This is Add Button')),
               ),
-              TextButton(onPressed: () {
-                Get.toNamed('/screenThree');
-              }, child: const Text('Change Language'),),
+              TextButton(
+                onPressed: () {
+                  Get.toNamed('/screenThree');
+                },
+                child: const Text('Change Language'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Get.toNamed('screenFour');
+                },
+                child: const Text('State-management'),
+              ),
             ],
           ),
         ],
