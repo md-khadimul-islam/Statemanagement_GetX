@@ -12,24 +12,26 @@ class ScreenTwo extends StatelessWidget {
         backgroundColor: Colors.blue,
         title: const Text('Screen Two'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text('This Second Screen'),
-            IconButton(
-              onPressed: () {
-                Get.back();
-                Get.back();
-              },
-              icon: const Icon(
-                Icons.add,
-                size: 50,
-              ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          IconButton(
+            onPressed: () {
+              Get.back();
+              Get.back();
+            },
+            icon: const Icon(
+              Icons.add,
+              size: 50,
             ),
-          ],
-        ),
+          ),
+          Container(
+            height: Get.height * .3,
+            color: Colors.red,
+            child: const Center(child: Text('This is Add Button')),
+
+          )
+        ],
       ),
     );
   }

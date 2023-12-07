@@ -13,12 +13,18 @@ class ScreenOne extends StatelessWidget {
         title: const Text('Screen One'),
       ),
       body: Center(
-        child: TextButton(
-          onPressed: () {
-            Get.toNamed('/screenTwo');
-          },
-          child: const Text('Navigate To Next Page'),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {
+                Get.toNamed('/screenTwo');
+              },
+              child: const Text('Navigate To Next Page'),
 
+            ),
+          ],
         ),
       ),
     );
