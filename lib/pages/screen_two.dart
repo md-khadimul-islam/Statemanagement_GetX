@@ -45,6 +45,12 @@ class ScreenTwo extends StatelessWidget {
                 },
                 child: const Text('State-management'),
               ),
+              TextButton(
+                onPressed: () {
+                  Get.toNamed('screenFive');
+                },
+                child: const Text('Api with GetX'),
+              ),
             ],
           ),
         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:statemanagement/pages/home_page.dart';
+import 'package:statemanagement/pages/screen_five.dart';
 import 'package:statemanagement/pages/screen_four.dart';
 import 'package:statemanagement/pages/screen_one.dart';
 import 'package:statemanagement/pages/screen_three.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/screenTwo', page: () => const ScreenTwo()),
         GetPage(name: '/screenThree', page: () => const ScreenThree()),
         GetPage(name: '/screenFour', page: () => const ScreenFour()),
+        GetPage(name: '/screenFive', page: () => const ScreenFive()),
       ],
     );
   }
